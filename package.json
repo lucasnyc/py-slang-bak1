@@ -27,7 +27,7 @@
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.1.2",
+    "@rollup/plugin-typescript": "^12.1.4",
     "@types/fast-levenshtein": "^0.0.4",
     "@types/jest": "^29.4.0",
     "@types/mathjs": "^9.4.1",
@@ -43,7 +43,7 @@
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
     "tslib": "^2.8.1",
-    "typescript": "^5.5.3"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "@types/estree": "^1.0.0",
