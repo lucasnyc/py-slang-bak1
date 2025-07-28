@@ -205,4 +205,11 @@ export async function runInContext(
     return result;
 }
 
+const context = new Context();
+const options: IOptions = {
+    isPrelude: false,
+    envSteps: 100000,
+    stepLimit: 100000
+};
+
 const {runnerPlugin, conduit} = initialise(PyEvaluator);

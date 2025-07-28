@@ -141,6 +141,7 @@
     const parser_1 = require("./parser");
     const translator_1 = require("./translator");
     const resolver_1 = require("./resolver");
+    const context_1 = require("./cse-machine/context");
     tslib_1.__exportStar(require("./errors"), exports);
     const pyRunner_1 = require("./runner/pyRunner");
     const initialise_1 = require("./conductor/runner/util/initialise");
@@ -158,13 +159,14 @@
         const translator = new translator_1.Translator(script);
         return translator.resolve(ast);
     }
-    function runInContext(code_1, context_1) {
+    function runInContext(code_1, context_2) {
         return tslib_1.__awaiter(this, arguments, void 0, function* (code, context, options = {}) {
             const estreeAst = parsePythonToEstreeAst(code, 1, true);
             const result = (0, pyRunner_1.runCSEMachine)(code, estreeAst, context, options);
             return result;
         });
     }
+    new context_1.Context();
     const { runnerPlugin, conduit } = (0, initialise_1.initialise)(PyEvaluator_1.PyEvaluator);
 
 }));
